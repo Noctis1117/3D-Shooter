@@ -30,7 +30,7 @@ public class playerShoot : MonoBehaviour
     {
         if (Input.GetMouseButtonDown(0))
         {
-           GameObject bullet = Instantiate(bulletPrefab, bulletPoint.transform.position, transform.rotation);
+           GameObject bullet = Instantiate(bulletPrefab, bulletPoint.transform.position, bulletPoint.transform.rotation);
             bullet.GetComponent<Rigidbody>().AddForce(transform.forward * speed);
         }
     }
