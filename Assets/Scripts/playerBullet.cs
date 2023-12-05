@@ -30,6 +30,7 @@ public class playerBullet : MonoBehaviour
         {
             Destroy(this.gameObject );
             Debug.Log("Good Shot");
+            enemyBehavior.health -= 25; 
         }
     }
 }

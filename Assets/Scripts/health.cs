@@ -1,37 +1,34 @@
 using System.Collections;
 using System.Collections.Generic;
-using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.SocialPlatforms.Impl;
 using UnityEngine.UI;
+using TMPro;
+using UnityEngine.SceneManagement;
 
 public class health : MonoBehaviour
 {
-    public Image healthBar;
+    public static int healthTotal = 100;
 
-    public float healthAmount = 100f;
-    // Start is called before the first frame update
+    public Text healthText;
+
     void Start()
     {
-
+        healthTotal = 100;
     }
+
+
+    
 
     // Update is called once per frame
     void Update()
     {
-       
-    }
+        healthText.text = "Health: " + healthTotal;
 
-    public void TakeDamage(float damage)
-    {
-        healthAmount -= damage;
-        healthBar.fillAmount = healthAmount / 100f;
-    }
+        if (healthTotal <= 0)
+        {
+            Debug.Log("you lose");
+        }
 
-    public void Heal(float healingAmount)
-    {
-        healthAmount += healingAmount;
-        healthAmount = Mathf.Clamp(healthAmount, 0, 100);
-
-        healthBar.fillAmount = healthAmount / 100f;
     }
 }
