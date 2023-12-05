@@ -1,3 +1,4 @@
+using Microsoft.Win32.SafeHandles;
 using System.Collections;
 using System.Collections.Generic;
 using Unity.VisualScripting;
@@ -39,6 +40,7 @@ public class Projectile : MonoBehaviour
         {
             Debug.Log("hit!");
             DestroyProjectile();
+            health.healthTotal -= 25; 
         }
     }
 

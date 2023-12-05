@@ -19,6 +19,8 @@ public class enemyBehavior : MonoBehaviour
 
     public Transform player;
 
+    public static int health = 50;
+
     
 
     // Start is called before the first frame update
@@ -55,5 +57,11 @@ public class enemyBehavior : MonoBehaviour
         }
 
         transform.LookAt(player.position);
+
+        if (health <= 0)
+        {
+            Destroy(this.gameObject);
+
+        }
     }  
 }

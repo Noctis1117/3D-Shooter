@@ -11,10 +11,9 @@ GameObject:
   - component: {fileID: 2994971160860271492}
   - component: {fileID: 7832451281080535628}
   - component: {fileID: 167497945466535987}
-  - component: {fileID: 814843372889982261}
   - component: {fileID: -8217353550201545277}
   - component: {fileID: -2507942950208234148}
-  - component: {fileID: 6811820956044360049}
+  - component: {fileID: 1699132046575763384}
   m_Layer: 0
   m_Name: PlayerBullet
   m_TagString: Untagged
@@ -87,19 +86,6 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!135 &814843372889982261
-SphereCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3834916281938718628}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Radius: 0.5
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!54 &-8217353550201545277
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -130,17 +116,17 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   lifetime: 2
   lifetimeCounter: 0
-  speed: 100
---- !u!65 &6811820956044360049
-BoxCollider:
+  speed: 200
+--- !u!135 &1699132046575763384
+SphereCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3834916281938718628}
   m_Material: {fileID: 0}
-  m_IsTrigger: 1
+  m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 0.99999994, y: 1, z: 1}
+  m_Radius: 0.5
   m_Center: {x: 0, y: 0, z: 0}

@@ -1,44 +1,34 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SocialPlatforms.Impl;
 using UnityEngine.UI;
+using TMPro;
+using UnityEngine.SceneManagement;
 
 public class health : MonoBehaviour
 {
-    public Image healthBar;
+    public static int healthTotal = 100;
 
-    public float healthAmount = 100f;
-    // Start is called before the first frame update
+    public Text healthText;
+
     void Start()
     {
-
+        healthTotal = 100;
     }
+
+
+    
 
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Return))
+        healthText.text = "Health: " + healthTotal;
+
+        if (healthTotal <= 0)
         {
-            TakeDamage(20);
+            Debug.Log("you lose");
         }
 
-        if (Input.GetKeyDown(KeyCode.Space))
-        {
-            Heal(20);
-        }
-    }
-
-    public void TakeDamage(float damage)
-    {
-        healthAmount -= damage;
-        healthBar.fillAmount = healthAmount / 100f;
-    }
-
-    public void Heal(float healingAmount)
-    {
-        healthAmount += healingAmount;
-        healthAmount = Mathf.Clamp(healthAmount, 0, 100);
-
-        healthBar.fillAmount = healthAmount / 100f;
     }
 }
